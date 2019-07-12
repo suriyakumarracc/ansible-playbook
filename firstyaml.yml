@@ -3,9 +3,9 @@
   become: yes
 
   tasks:
-  - name: Install 7zip from a network share specifying the credentials
-   win_package:
-     path: \\domain\programs\7z.exe
-     product_id: 7-Zip
-     arguments: /S
-     state: present
+  - name: Install Microsoft NET Framework
+    win_package:
+      path: "http://path/to/dotNetFramework4.6.1.exe"
+      product_id: '{BD6F5371-DAC1-30F0-9DDE-CAC6791E28C3}'
+      register: dotnetfx_exe
+      arguments: /q /norestart
