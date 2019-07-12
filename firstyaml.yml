@@ -1,8 +1,7 @@
 ---
 - hosts: all
-  become: yes
 
-  tasks:
+tasks:
   - name: Install Microsoft NET Framework
     win_package:
       path: "http://path/to/dotNetFramework4.6.1.exe"
