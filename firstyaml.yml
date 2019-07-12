@@ -4,7 +4,7 @@
 tasks:
   - name: Install Microsoft NET Framework
     win_package:
-      path: "http://path/to/dotNetFramework4.6.1.exe"
-      product_id: '{BD6F5371-DAC1-30F0-9DDE-CAC6791E28C3}'
-      register: dotnetfx_exe
+      path: "https://download.microsoft.com/download/E/2/1/E21644B5-2DF2-47C2-91BD-63C560427900/NDP452-KB2901907-x86-x64-AllOS-ENU.exe"
+      product_id: "{26784146-6E05-3FF9-9335-786C7C0FB5BE}"
+      register: dotnet452_exe
       arguments: /q /norestart
