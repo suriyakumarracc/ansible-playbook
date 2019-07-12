@@ -1,7 +1,6 @@
 ---
 - hosts: all
   become: yes
-  become_user: Administrator
 
   tasks:
   - name: "Install Microsoft .NET Framework 4.5.2."
