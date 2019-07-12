@@ -3,7 +3,9 @@
   become: yes
 
   tasks:
-  - name: Ensure 7-Zip is installed via win_package
-  win_package:
-   path: C:\temp\7z.msi
-   state: present
+  - name: Install 7zip from a network share specifying the credentials
+   win_package:
+     path: \\domain\programs\7z.exe
+     product_id: 7-Zip
+     arguments: /S
+     state: present
